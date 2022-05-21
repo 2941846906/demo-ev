@@ -14,7 +14,10 @@ const routes = [
     children: [
       { path: 'home', component: () => import('@/views/Menus/Home/Home.vue') },
       { path: 'art-cate', component: () => import('@/views/Menus/article/ArtCate.vue') },
-      { path: 'art-list', component: () => import('@/views/Menus/article/ArtList.vue') }
+      { path: 'art-list', component: () => import('@/views/Menus/article/ArtList.vue') },
+      { path: 'user-info', component: () => import('@/views/Menus/User/UserInfo.vue') },
+      { path: 'user-avatar', component: () => import('@/views/Menus/User/UserAvatar.vue') },
+      { path: 'user-pwd', component: () => import('@/views/Menus/User/UserPwd.vue') }
     ]
   }
 ]
