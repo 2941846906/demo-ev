@@ -12,7 +12,9 @@ const routes = [
     component: () => import('@/views/Main/Main.vue'),
     redirect: '/home',
     children: [
-      { path: 'home', component: () => import('@/views/Menus/Home/Home.vue') }
+      { path: 'home', component: () => import('@/views/Menus/Home/Home.vue') },
+      { path: 'art-cate', component: () => import('@/views/Menus/article/ArtCate.vue') },
+      { path: 'art-list', component: () => import('@/views/Menus/article/ArtList.vue') }
     ]
   }
 ]

@@ -20,6 +20,19 @@ axios.interceptors.request.use(function (config) {
   return Promise.reject(error)
 })
 
+axios.interceptors.response.use(function (response) {
+  // 对响应数据做点什么
+  return response
+}, function (error) {
+  // 对响应错误做点什么
+  // console.log(error)
+  if (error.response.status === 401) {
+    store.commit('user/uodateToken', '')
+    router.push('/login')
+  }
+  return Promise.reject(error)
+})
+
 Vue.prototype.$http = axios
 Vue.use(ElementUI)
 Vue.config.productionTip = false
